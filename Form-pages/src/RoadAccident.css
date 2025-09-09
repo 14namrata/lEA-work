@@ -1,0 +1,128 @@
+.ais-form {
+  max-width: 960px;
+  margin: auto;
+  padding: 1rem;
+  background: #f8f9fa;
+  border-radius: 10px;
+  font-family: Arial, sans-serif;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Small screens default = 3 per row */
+  gap: 1rem;
+}
+
+/* On larger screens (min-width: 500px), use 1 field per row */
+@media (min-width: 500px) {
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.field label {
+  font-weight: bold;
+  font-size: 14px;
+  margin-bottom: 4px;
+  color: #333;
+}
+
+/* Inputs, selects, and textareas styling */
+input,
+select,
+textarea {
+  padding: 10px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  background-color: #fff;
+  transition: border-color 0.3s ease;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  border-color: #2563eb; /* Blue border on focus */
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.25);
+}
+
+textarea {
+  resize: vertical;
+}
+
+.full {
+  grid-column: 1 / -1; /* Full width across all columns */
+}
+
+.btn-wrap {
+  text-align: center;
+  margin-top: 1.5rem;
+}
+
+.btn {
+  padding: 10px 20px;
+  background-color: #2563eb;
+  color: white;
+  font-size: 15px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.btn:hover {
+  background-color: #1d4ed8;
+}
+
+/* Responsive form hint (if needed in future) */
+.field-hint {
+  font-size: 12px;
+  color: #666;
+  margin-top: 3px;
+}
+
+.field-hint .hover-info {
+  color: #666;
+  text-decoration: underline;
+  cursor: help;
+}
+
+.field-hint .hover-info:hover {
+  color: #ff6600;
+}
+.section-subheader {
+  font-size: 14px;
+  font-weight: 600;
+  margin-top: 0.3rem; /* Reduced spacing */
+  margin-bottom: 0.2rem;
+}
+
+.not-app-info {
+  font-size: 0.85rem;
+  color: grey;
+  margin-top: 4px;
+  cursor: default;
+  transition: color 0.3s;
+}
+
+.not-app-info:hover {
+  color: #007bff; /* Blue on hover */
+}
+
+.not-app-info .hover-info {
+  color: grey;
+}
+
+
+
+
+

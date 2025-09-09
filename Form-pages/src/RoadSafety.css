@@ -1,0 +1,68 @@
+.road-form {
+  max-width: 900px;
+  margin: auto;
+  padding: 1rem;
+  font-family: Arial, sans-serif;
+  background-color: #f8f9fa;
+  border-radius: 6px;
+}
+
+
+
+
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Small screens: 3 fields per row */
+  gap: 1rem;
+}
+
+/* On larger screens (500px and up), stack fields vertically */
+@media (min-width: 500px) {
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+}
+
+.field label {
+  font-weight: bold;
+  font-size: 14px;
+  margin-bottom: 4px;
+}
+
+.field input,
+.field select,
+.field textarea {
+  padding: 8px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.full {
+  grid-column: 1 / -1; /* Full width field */
+}
+
+.btn-wrap {
+  grid-column: 1 / -1;
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.btn {
+  background-color: royalblue;
+  color: white;
+  border: none;
+  padding: 0.5rem 1.2rem;
+  font-size: 14px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: #003d99;
+}

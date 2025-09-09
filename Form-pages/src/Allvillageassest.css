@@ -1,0 +1,91 @@
+/* Container for the form */
+.village-form-container {
+  max-width: 700px;
+  margin: auto;
+  padding: 24px;
+  box-sizing: border-box;
+  background-color: #f8f8f8;
+}
+
+/* Default (Large screen): stacked layout */
+.village-form-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Each input/field block */
+.village-form-field {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+/* Label styling */
+.village-form-field label {
+  font-weight: 600;
+  margin-bottom: 5px;
+  font-size: 14px;
+}
+
+/* Input, Select, Textarea styling */
+.village-form-field input,
+.village-form-field select,
+.village-form-field textarea {
+  padding: 10px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  transition: border-color 0.3s ease;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.village-form-field input:focus,
+.village-form-field select:focus,
+.village-form-field textarea:focus {
+  outline: none;
+  border-color: royalblue;
+}
+
+/* Full-width fields like Source and Submit */
+.village-full-width {
+  grid-column: span 3;
+  width: 100%;
+}
+
+/* Submit Button Styling */
+.village-form-submit {
+  padding: 12px;
+  font-size: 16px;
+  background-color: royalblue;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  width: 100%;
+}
+
+.village-form-submit:hover {
+  background-color: #2c50db;
+}
+
+@media (max-width: 500px) {
+  .village-form-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 🔥 FORCE 3 columns */
+    gap: 12px;
+  }
+
+  .village-form-field {
+    width: 100%;
+  }
+
+  .village-full-width {
+    grid-column: span 3;
+  }
+
+  .village-form-container {
+    padding: 16px;
+  }
+}

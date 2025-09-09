@@ -1,0 +1,267 @@
+/* Main Container */
+.assigned-container {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 20px;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f9f9f9;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Top Section */
+.um-top-section {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+
+.um-search-input {
+  flex: 1;
+  padding: 10px 12px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+}
+
+.um-add-button {
+  margin-left: 10px;
+  background-color: #007bff;
+  border: none;
+  border-radius: 8px;
+  padding: 8px 12px;
+  cursor: pointer;
+  color: white;
+  font-size: 18px;
+  transition: background 0.3s ease;
+}
+
+.um-add-button:hover {
+  background-color: #0056b3;
+}
+
+/* Roles List */
+.role-scroll {
+  max-height: 300px;
+  overflow-y: auto;
+  background-color: #fff;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+  padding: 0.5rem;
+}
+
+.role-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.role-list li {
+  padding: 10px 12px;
+  font-size: 16px;
+  border-bottom: 1px solid #eee;
+}
+
+.role-list li.even {
+  background-color: #f0f8ff;
+}
+
+/* Assign Form Box */
+.assign-form-box {
+  margin-top: 20px;
+  background-color: #ffffff;
+  border: 1px solid #e6e6e6;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.05);
+}
+
+/* Tabs */
+.assign-tabs {
+  display: flex;
+  width: 100%;
+  gap: 10px;
+  margin-bottom: 16px;
+}
+
+.tab-btn {
+  flex: 1;                /* equal width for both buttons */
+  text-align: center;     /* center the text */
+  white-space: nowrap;    /* prevent wrapping */
+  padding: 12px 0;        /* consistent height */
+  font-size: 15px;
+  font-weight: 500;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background: #f1f1f1;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.tab-btn.active {
+  background-color: #007bff;
+  color: white;
+  border-color: #007bff;
+}
+
+.tab-btn:hover:not(.active) {
+  background-color: #e9ecef;
+}
+
+/* Content Layout */
+.assign-content {
+  display: flex;
+  gap: 20px;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+/* Available / Assigned lists */
+.assign-list {
+  flex: 1;
+  min-width: 280px;
+  display: flex;
+  flex-direction: column;
+  padding: 16px;
+  background: #fafafa;
+  border-radius: 12px;
+  border: 1px solid #ddd;
+}
+
+.list-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.list-header h4 {
+  font-size: 1.1rem;
+  color: #333;
+  margin: 0;
+}
+
+.item-count {
+  background-color: #007bff;
+  color: white;
+  font-size: 0.75rem;
+  padding: 4px 10px;
+  border-radius: 999px;
+}
+
+/* Search input inside lists */
+.list-search {
+  border: 1px solid #ccc;
+  padding: 10px 12px;
+  border-radius: 8px;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.list-search:focus {
+  border-color: #007bff;
+}
+
+/* List box */
+.list-box {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  background: white;
+  border-radius: 8px;
+  border: 1px solid #e4e4e4;
+  max-height: 220px;
+  overflow-y: auto;
+}
+
+.list-box li {
+  padding: 10px 14px;
+  font-size: 0.95rem;
+  color: #444;
+  border-bottom: 1px solid #eee;
+}
+
+.list-box li:last-child {
+  border-bottom: none;
+}
+
+/* Middle Controls */
+.assign-controls {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 12px;
+  align-items: center;
+}
+
+.assign-btn {
+  padding: 10px 12px;
+  font-size: 16px;
+  border: 1px solid #dcdcdc;
+  background: #f7f7f7;
+  color: #333;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.assign-btn:hover {
+  background: #eaeaea;
+}
+
+.assign-btn.green {
+  background-color: #28a745;
+  color: white;
+  border: none;
+}
+
+.assign-btn.green:hover {
+  background-color: #218838;
+}
+
+.assign-btn.red {
+  background-color: #dc3545;
+  color: white;
+  border: none;
+}
+
+.assign-btn.red:hover {
+  background-color: #c82333;
+}
+
+.assign-btn.cancel {
+  background-color: #6c757d;
+  color: white;
+  font-size: 15px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  border: none;
+}
+
+.assign-btn.cancel:hover {
+  background-color: #5a6268;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .assign-content {
+    flex-direction: column;
+  }
+
+  .assign-controls {
+    flex-direction: row;
+    justify-content: center;
+    padding: 10px 0;
+  }
+
+  .assign-btn {
+    font-size: 14px;
+    padding: 8px 12px;
+  }
+
+  .assign-btn.cancel {
+    font-size: 14px;
+    padding: 8px 14px;
+  }
+}

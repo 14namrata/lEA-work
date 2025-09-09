@@ -1,0 +1,94 @@
+/* Container styling */
+.form-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 1rem;
+    background-color: #f4f4f4;
+}
+
+/* Grid layout: default (mobile) is 3 columns */
+.form-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    background-color: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+/* Make it 1 column for medium and larger screens */
+@media screen and (min-width: 499px) {
+    .form-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.form-field {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-field label {
+    margin-bottom: 0.25rem;
+    font-weight: bold;
+    font-size: 0.85rem;
+    color: #333;
+}
+
+.form-field input,
+.form-field select,
+.form-field textarea {
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    background-color: #fff;
+    transition: border-color 0.3s;
+}
+
+.form-field input:focus,
+.form-field select:focus,
+.form-field textarea:focus {
+    border-color: #007BFF;
+    outline: none;
+}
+
+/* Make remarks and submit span full row */
+.full-width {
+    grid-column: span 3;
+}
+
+/* For larger screens */
+@media screen and (min-width: 499px) {
+    .full-width {
+        grid-column: span 1;
+    }
+}
+
+.form-submit {
+    text-align: center;
+}
+
+.form-submit button {
+    background-color: #007BFF;
+    color: #fff;
+    padding: 0.75rem 2rem;
+    font-weight: bold;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.form-submit button:hover {
+    background-color: #0056b3;
+}
+
+.field label {
+  font-weight: bold;
+  font-size: 14px;
+  margin-bottom: 4px;
+  color: #333;
+}

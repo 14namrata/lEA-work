@@ -2,6 +2,7 @@ import React from "react";
 import { BrowserRouter as Router, Routes, Route, useLocation } from "react-router-dom";
 import Dashboard from "./components/Dashboard";
 import HeaderTabs from "./components/HeaderTabs";
+import UserProfile from "./components/UserProfile";
 import AddRolePage from "./pages/AddRolePage";
 import AssignRolePage from "./pages/AssignRolePage";
 import UserManagementPage from "./pages/UserManagementPage";
@@ -33,6 +34,9 @@ const App = () => {
         <Routes>
           {/* Home (Dashboard) */}
           <Route path="/" element={<Dashboard />} />
+
+          {/* User Profile */}
+          <Route path="/profile" element={<UserProfile />} />
 
           {/* Role Management Section */}
           <Route path="/add-role" element={<AddRolePage />} />

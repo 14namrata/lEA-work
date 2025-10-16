@@ -6,8 +6,10 @@ import AddRolePage from "./pages/AddRolePage";
 import AssignRolePage from "./pages/AssignRolePage";
 import UserManagementPage from "./pages/UserManagementPage";
 import RoleManagementPage from "./pages/RoleManagementPage";
+import NavbarPage from "./pages/NavbarPage";
 import "@fortawesome/fontawesome-free/css/all.min.css";
 import "./App.css";
+import UserProfile from "./components/UserProfile";
 
 // Wrapper to conditionally show HeaderTabs
 const Layout = ({ children }) => {
@@ -39,7 +41,8 @@ const App = () => {
           <Route path="/assign-role" element={<AssignRolePage />} />
           <Route path="/user-management" element={<UserManagementPage />} />
           <Route path="/role-management" element={<RoleManagementPage />} />
-
+          <Route path="/profile" element={<UserProfile/>}/>
+          <Route path="/navbar" element={<NavbarPage />} />
           {/* Fallback */}
           <Route path="*" element={<Dashboard />} />
         </Routes>
